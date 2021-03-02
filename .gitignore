@@ -1,1 +1,4 @@
 bin/
+.seetings/
+.classpath/
+.project/
