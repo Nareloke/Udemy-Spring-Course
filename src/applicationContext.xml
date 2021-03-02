@@ -8,7 +8,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- define the dependency -->
-	<bean id="myFortune"
+	<bean id="myFortuneService"
 		class="com.luv2code.springdemo.HappyFortuneService">
 	</bean>
 
@@ -17,9 +17,16 @@
     	class="com.luv2code.springdemo.BaseballCoach">
     	
     	<!-- set up constructor injection -->
-    	<constructor-arg ref="myFortune" />
+    	<constructor-arg ref="myFortuneService" />
    	</bean>
    	
+	<bean id="myCricketCoach" 
+		class="com.luv2code.springdemo.CricketCoach">
+		
+		<!-- set up setter injection -->
+		<property name="fortuneService" ref="myFortuneService" />
+	</bean>
+	
 	<!-- 
 	Add a logger config to see logging messages.		
 	- For more detailed logs, set values to "FINEST"
