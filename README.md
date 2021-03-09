@@ -22,3 +22,9 @@ To do so, another Spring annotation is needed: Qualifier(). Being necessary pass
 -- PostConstruct;
 -- PreDestroy;
 - For prototype scoped beans, Spring does not call PreDestroy method!
+
+# Section 10
+- Ways of Configuring Spring Container
+1. Full XML Config;
+2. XML Component Scan;
+3. Java Configuration Class.
