@@ -9,12 +9,21 @@
 
 	<form:form action="processForm" modelAttribute="student" >
 		
-		<p> First name: <form:input path="firstName" /> </p>
-		<p> Last Name: <form:input path="lastName" /> </p>
-		<p> Country: </p>
-		<form:select path="country">
-			<form:options items="${student.countryOptions}" />
-		</form:select>
+		<div> First name: <form:input path="firstName" /> </div>
+		<div> Last Name: <form:input path="lastName" /> </div>
+		<div> Country: 
+			<form:select path="country">
+				<form:options items="${student.countryOptions}" />
+			</form:select>
+		</div>
+		
+		<div>
+			Favorite Language:
+			Java <form:radiobutton path="favoriteLanguage" value="Java" />
+			C# <form:radiobutton path="favoriteLanguage" value="C#" />
+			PHP <form:radiobutton path="favoriteLanguage" value="PHP" />
+			Ruby <form:radiobutton path="favoriteLanguage" value="Ruby" />
+		</div>
 		
 		<input type="submit" value="Submit" />
 	</form:form>
