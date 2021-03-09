@@ -2,6 +2,8 @@
 
 <html>
 	<body>
-		<h2>Spring MVC Demo - Home Page</h2>
+		<h1>Spring MVC Demo - Home Page</h1>
+		
+		<a href="showForm">Hello World form</a>
 	</body>
 </html>
