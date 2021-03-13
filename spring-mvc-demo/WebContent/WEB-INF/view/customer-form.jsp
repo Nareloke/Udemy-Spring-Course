@@ -22,6 +22,9 @@
 		<div> Free passes: <form:input path="freePasses" /> </div>
 		<form:errors path="freePasses" cssClass="error" />
 
+		<div> Postal Code: <form:input path="postalCode" /> </div>
+		<form:errors path="postalCode" cssClass="error" />
+
 		<input type="submit" value="Submit" />
 	</form:form>
 
