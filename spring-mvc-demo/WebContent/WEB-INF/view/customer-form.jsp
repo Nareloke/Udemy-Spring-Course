@@ -19,6 +19,9 @@
 		<div> Last name (*): <form:input path="lastName" /> </div>
 		<form:errors path="lastName" cssClass="error" />
 		
+		<div> Free passes: <form:input path="freePasses" /> </div>
+		<form:errors path="freePasses" cssClass="error" />
+
 		<input type="submit" value="Submit" />
 	</form:form>
 
