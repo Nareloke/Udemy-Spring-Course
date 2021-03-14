@@ -25,6 +25,9 @@
 		<div> Postal Code: <form:input path="postalCode" /> </div>
 		<form:errors path="postalCode" cssClass="error" />
 
+		<div> Course Code: <form:input path="courseCode" /> </div>
+		<form:errors path="courseCode" cssClass="error" />
+
 		<input type="submit" value="Submit" />
 	</form:form>
 
