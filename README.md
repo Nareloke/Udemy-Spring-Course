@@ -28,3 +28,16 @@ To do so, another Spring annotation is needed: Qualifier(). Being necessary pass
 1. Full XML Config;
 2. XML Component Scan;
 3. Java Configuration Class.
+
+# Secion 16
+- Validating Number Ranges and Regular Expressions:
+@NotNull = The corresponding field can't be Null. The param 'message' is the message that will be send.
+@Size = The size of the corresponding field. 'min', to the minimum ammount of chars.
+@Min and @Max = Similar to the @Size
+@Pattern = Used to create regular expressions. 'regexp' is the param that will receive the regular expression. 
+
+# Section 17
+- Creating Custom Validations
+@Constraint = 'validateBy'is the param the receive the class responsible to validate the annotations' business rule.
+@Target = Annotation to set where the annotation can be used.
+@Retention = When the annotation will occur.

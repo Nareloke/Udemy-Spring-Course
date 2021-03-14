@@ -24,7 +24,7 @@ public class Customer {
 	@Pattern(regexp="^[a-zA-z0-9]{5}", message="only 5 chars/digits")
 	private String postalCode;
 
-	@CourseCode
+	@CourseCode(value="TOPS", message="must start with TOPS")
 	private String courseCode;
 	
 	public String getFirstName() {
