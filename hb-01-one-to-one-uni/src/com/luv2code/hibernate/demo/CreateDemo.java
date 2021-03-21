@@ -24,24 +24,26 @@ public class CreateDemo {
 		
 		try {
 
-			// create the objects
-			Instructor tempInstructor = 
-					new Instructor("Chad", "Darby", "darby@luv2code.com");
-
-			InstructorDetail tempInstructorDetail =
-					new InstructorDetail(
-							"http://www.luv2code.com/youtube",
-							"Luv 2 code!!!");
-
-			// associate the objects
-			tempInstructor.setInstructorDetail(tempInstructorDetail);
-
 			// start a transaction
 			session.beginTransaction();
 
-			// save the instructor
-			
-			
+			// get instructor by primary key / id
+			int theId = 1;
+			Instructor tempInstructor =
+					session.get(Instructor.class, theId);
+
+			System.out.println("Found instructor: " + tempInstructor);
+
+			// delete the instructors
+			if (tempInstructor != null) {
+				System.out.println("Deleting: " + tempInstructor);
+
+				// Note: will ALSO delete associated "details" object
+				// because of CascadeType.ALL
+				//
+				session.delete(tempInstructor);
+			}
+
 			// commit transaction
 			session.getTransaction().commit();
 			System.out.println("Done!");

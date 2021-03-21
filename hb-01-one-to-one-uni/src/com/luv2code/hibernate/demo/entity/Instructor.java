@@ -25,7 +25,7 @@ public class Instructor {
 	@Column(name="last_name")
 	private String lastName;
 
-	@Column(name="email_name")
+	@Column(name="email")
 	private String email;
 
 	@OneToOne(cascade=CascadeType.ALL)
