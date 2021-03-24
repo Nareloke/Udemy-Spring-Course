@@ -39,10 +39,17 @@ public class AddCoursesForMaryDemo {
 			System.out.println("Course: " + tempStudent.getCourses());
 
 			// create more courses
+			Course tempCours1 = new Course("Rubik's Cube - How to Speed Cube");
+			Course tempCours2 = new Course("Ataria 2600 - Game Development");		
 
 			// add student to courses
+			tempCours1.addStudent(tempStudent);
+			tempCours2.addStudent(tempStudent);
 
 			// save the courses
+			System.out.println("\nSaving the course ...");
+			session.save(tempCours1);
+			session.save(tempCours2);
 
 			// commit transaction
 			session.getTransaction().commit();
