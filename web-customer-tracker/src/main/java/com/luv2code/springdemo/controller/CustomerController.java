@@ -1,4 +1,4 @@
-package com.luv2code.controller;
+package com.luv2code.springdemo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
