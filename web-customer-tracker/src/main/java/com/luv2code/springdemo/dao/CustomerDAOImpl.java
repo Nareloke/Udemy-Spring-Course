@@ -33,6 +33,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 		List<Customer> customers = theQuery.getResultList();
 
 		// return the results
-		return null;
+		return customers;
 	}
 }
