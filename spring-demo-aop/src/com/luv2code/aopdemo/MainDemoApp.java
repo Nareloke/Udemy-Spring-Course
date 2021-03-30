@@ -10,12 +10,18 @@ public class MainDemoApp {
 
 		// read spring configuration java class
 		AnnotationConfigApplicationContext context =
-				new AnnotationConfigApplicationContext(AccountDAO.class);
+				new AnnotationConfigApplicationContext(DemoConfig.class);
 
 		// get the bean from spring container
 		AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
 
 		// call the business method
+		theAccountDAO.addAccount();
+
+		// do it again!
+		System.out.println("\n let's call it again! \n");
+
+		// call the business method again
 		theAccountDAO.addAccount();
 
 		// close the context
