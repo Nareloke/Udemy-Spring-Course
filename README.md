@@ -52,3 +52,16 @@ To do so, another Spring annotation is needed: Qualifier(). Being necessary pass
 1. .save() = save the object passed as parameter from the table  
 2. To update is only necessary to commit the session after make the modification  
 3. .delete() = delete the object passed as parameter from the table  
+
+# Secion 34 - Section 45
+- AOP: Aspect Oriented Programming
+1. @Before advice type : run before the method  
+2. Pointcut Expressions : where the AOP will be executed   
+3. JoinPoint : Receive the method metadata  
+4. AfterReturning : run after the method(success execution)  
+5. AfterThrowing :run after method (if exception thrown)   
+6. After : run after the method (finally)  
+7. Around : run before and after method  
+
+
+
