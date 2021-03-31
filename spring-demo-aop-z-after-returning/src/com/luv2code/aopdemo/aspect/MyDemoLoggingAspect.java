@@ -52,11 +52,17 @@ public class MyDemoLoggingAspect {
 
 	// add a new advice for @AfterReturning on the findAccounts method
 	@AfterReturning(
-			pointcut="* com.luv2code.aopdemo.dao.AccountDAO.findAccounts(..)",
+			pointcut="execution(* com.luv2code.aopdemo.dao.AccountDAO.findAccounts(..))",
 			returning="result"
 			)
 	public void afterReturningFindAccountsAdvice(
 			JoinPoint theJoinPoint, List<Account> result) {
-		
+
+		// print out which method we are advising on
+		String method = theJoinPoint.getSignature().toShortString();
+		System.out.println("\n======>>>> Executing @AfterReturning on method: " + method);
+
+		// print out the results of the method call
+		System.out.println("\n======>>>> Result is: " + result);
 	}
 }
