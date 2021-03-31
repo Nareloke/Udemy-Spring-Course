@@ -58,10 +58,10 @@ To do so, another Spring annotation is needed: Qualifier(). Being necessary pass
 1. @Before advice type : run before the method  
 2. Pointcut Expressions : where the AOP will be executed   
 3. JoinPoint : Receive the method metadata  
-4. AfterReturning : run after the method(success execution)  
-5. AfterThrowing :run after method (if exception thrown)   
-6. After : run after the method (finally)  
-7. Around : run before and after method  
+4. @AfterReturning : run after the method(success execution)  
+5. @AfterThrowing :run after method (if exception thrown)   
+6. @After : run after the method (finally)  
+7. @Around : run before and after method  
 
-
+The @After runs before @AfterThrowing  
 
