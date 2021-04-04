@@ -35,7 +35,7 @@
 				<div style="padding-top: 30px" class="panel-body">
 
 					<!-- Login Form -->
-					<form action="${pageContext.request.contextPath}/authenticateTheUser" 
+					<form:form action="${pageContext.request.contextPath}/authenticateTheUser" 
 						method="POST" 
 						class="form-horizontal">
 
@@ -82,7 +82,7 @@
 							</div>
 						</div>
 
-					</form>
+					</form:form>
 
 				</div>
 
