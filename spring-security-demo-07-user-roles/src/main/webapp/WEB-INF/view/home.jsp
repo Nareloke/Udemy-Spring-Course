@@ -28,6 +28,13 @@
 			(Only for Manager peeps)
 		</p>
 
+		<!-- Add a link to point to /systems ... this is for the admin -->
+
+		<p>
+			<a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>
+			(Only for Admin peeps)
+		</p>
+
 		<hr>
 
 		<!-- Add a logout button -->
