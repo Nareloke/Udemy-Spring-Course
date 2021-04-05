@@ -25,9 +25,12 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		
+
 		http.authorizeRequests()
-				.anyRequest().authenticated() // Any request to the app must be authenticated
+				// .anyRequest().authenticated() // Any request to the app must be authenticated
+				.antMatchers("/").hasRole("EMPLOYEE")
+				.antMatchers("/leaders/**").hasRole("MANAGER")
+				.antMatchers("/systems/**").hasRole("ADMIN")
 			.and()
 			.formLogin() // Customizing the form login process
 				.loginPage("/showMyLoginPage") // Show our custom form at the request mapping
