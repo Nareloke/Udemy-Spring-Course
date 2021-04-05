@@ -61,8 +61,8 @@ public class DemoAppConfig {
 
 		// set database connection props
 		securityDataSource.setJdbcUrl(env.getProperty("jdbc.url"));
-		securityDataSource.setJdbcUrl(env.getProperty("jdbc.user"));
-		securityDataSource.setJdbcUrl(env.getProperty("jdbc.password"));
+		securityDataSource.setUser(env.getProperty("jdbc.user"));
+		securityDataSource.setPassword(env.getProperty("jdbc.password"));
 
 		// set connection pool props
 		securityDataSource.setInitialPoolSize(
@@ -74,7 +74,7 @@ public class DemoAppConfig {
 		securityDataSource.setMaxIdleTime(
 				getIntProperty("connection.pool.maxIdleTime"));
 
-		return null;
+		return securityDataSource;
 	}
 
 	// need a helper method
