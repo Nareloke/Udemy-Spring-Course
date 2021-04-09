@@ -1,4 +1,4 @@
-package com.example.springboot.dao;
+package com.example.springboot.cruddemo.dao;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.example.springboot.entity.Employee;
+import com.example.springboot.cruddemo.entity.Employee;
 
 @Repository
 public class EmployeeDAOHibernateImpl implements EmployeeDAO {
@@ -74,6 +74,10 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 		Query theQuery =
 				currentSession.createQuery(
 						"DELETE FROM Employee WHERE id = :employeeId");
+
+		theQuery.setParameter("employeeId", theId);
+
+		theQuery.executeUpdate();
 	}
 
 }

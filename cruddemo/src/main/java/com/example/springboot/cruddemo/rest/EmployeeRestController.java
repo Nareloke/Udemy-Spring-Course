@@ -1,4 +1,5 @@
-package com.example.springboot.rest;
+package com.example.springboot.cruddemo.rest;
+
 
 import java.util.List;
 
@@ -7,25 +8,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.springboot.dao.EmployeeDAO;
-import com.example.springboot.entity.Employee;
+import com.example.springboot.cruddemo.entity.Employee;
+import com.example.springboot.cruddemo.service.EmployeeService;
 
 @RestController
 @RequestMapping("/api")
 public class EmployeeRestController {
 
-	private EmployeeDAO employeeDAO;
+	private EmployeeService employeeService;
 
 	@Autowired
-	public EmployeeRestController(EmployeeDAO theEmployeeDAO) {
+	public EmployeeRestController(EmployeeService theEmployeeService) {
 
-		employeeDAO = theEmployeeDAO;
+		employeeService = theEmployeeService;
 	}
 
 	@GetMapping("/employees")
 	public List<Employee> findAll() {
 
-		return employeeDAO.findAll();
+		return employeeService.findAll();
 	}
 
 }

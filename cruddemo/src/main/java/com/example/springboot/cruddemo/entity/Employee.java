@@ -1,12 +1,11 @@
-package com.example.springboot.entity;
+package com.example.springboot.cruddemo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Table(name="employee")
@@ -30,8 +29,7 @@ public class Employee {
 
 	}
 
-	public Employee(int id, String firstName, String lastName, String email) {
-		this.id = id;
+	public Employee(String firstName, String lastName, String email) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
